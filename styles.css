@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Courier New', monospace; /* Use monospace font */
+    background-color: #000; /* Set background color to black */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0f0; /* Set header color to green */
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    perspective: 1000px;
+}
+
+.column {
+    flex: 1;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 200px;
+}
+
+.column-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #0f0; /* Set column label color to green */
+}
+
+.box {
+    border: 1px solid #0f0; /* Set box border color to green */
+    position: relative;
+    min-height: 100px;
+    background-color: #000; /* Set box background color to black */
+}
+
+.column-content {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Update this property to center */
+    backface-visibility: hidden;
+    color: #0f0; /* Set content color to green */
+}
+
+.use-case-content {
+  text-align: center; /* Horizontally center the text */
+  white-space: pre-wrap; /* Wrap the long text */
+}
+
+.spin-animation {
+    animation: spin 2s ease-out;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(3600deg);
+    }
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #0f0; /* Set button border color to green */
+    background-color: #000; /* Set button background color to black */
+    color: #0f0; /* Set button text color to green */
+}
+
+button:hover {
+    background-color: #0f0; /* Set button hover background color to green */
+    color: #000; /* Set button hover text color to black */
+}
